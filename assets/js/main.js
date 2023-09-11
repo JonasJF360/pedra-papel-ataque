@@ -1,6 +1,6 @@
 (App => {
 
-    const imagens = ['papel', 'pedra', 'ataque', 'ataque-especial']
+    const imagens = ['papel', 'pedra', 'ataque', 'especial']
 
     function numeroAleatorio(inicio = 0, fim = 10) {
         if (inicio > 1) fim = (fim - inicio) + 1;
