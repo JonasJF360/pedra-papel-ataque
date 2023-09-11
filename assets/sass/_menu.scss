@@ -1,0 +1,26 @@
+#menu {
+    display: flex;
+    padding: 1rem;
+    width: 100%;
+    padding: 1rem;
+    border-bottom: 1px solid $cor-preto-50;
+
+    ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+
+    li {
+        list-style: none;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 16pt;
+
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+}

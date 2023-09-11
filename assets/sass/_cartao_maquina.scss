@@ -1,0 +1,18 @@
+.cartao-maquina {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: .5rem;
+    background-color: $cor-cartao-maquina;
+    width: 120px;
+    height: 160px;
+    border-radius: .5rem;
+
+    div {
+        width: 80px;
+        height: 80px;
+        background-color: $cor-cartao-maquina;
+        border-radius: 50%;
+        filter: brightness(1.8);
+    }
+}

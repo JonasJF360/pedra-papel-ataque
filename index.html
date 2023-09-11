@@ -1,11 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pedra, papel e ataque</title>
+    <!-- Impostações externas de estilo css -->
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Fonte Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+    <!-- Meus estilos CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
-    
+
+    <section>
+
+        <nav id="menu">
+            <ul>
+                <li>Reiniciar</li>
+                <li>Ajuda</li>
+                <li>Jogadores</li>
+            </ul>
+        </nav>
+
+        <div id="pontos">
+            <h2> Nome: <span>00</span> </h2>
+            <h2> Máquina: <span>00</span> </h2>
+        </div>
+
+        <div id="mesa-jogo">
+            <div id="lado-maquina">
+                <div class="cartao-maquina">
+                    <div>
+                    </div>
+                </div>
+                <div class="cartao-maquina">
+                    <div>
+                    </div>
+                </div>
+                <div class="cartao-maquina">
+                    <div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="lado-jogador">
+                <div class="cartao-player">
+                    <h1>Papel</h1>
+                    <div>
+                        <img class="img-player" src="./assets/img/papel.png" alt="Papel">
+                    </div>
+                </div>
+                <div class="cartao-player">
+                    <h1>Pedra</h1>
+                    <div>
+                        <img class="img-player" src="./assets/img/pedra.png" alt="Pedra">
+                    </div>
+                </div>
+                <div class="cartao-player">
+                    <h1>Ataque</h1>
+                    <div>
+                        <img class="img-player" src="./assets/img/ataque.png" alt="Ataque">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scrips da página -->
+    <script src="./assets/js/main.js" defer></script>
 </body>
+
 </html>

@@ -1,0 +1,141 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+body section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: #bdddb3;
+  width: 100%;
+  max-width: 800px;
+  min-height: 400px;
+  border-radius: 1rem;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3137254902);
+}
+
+#menu {
+  display: flex;
+  padding: 1rem;
+  width: 100%;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3137254902);
+}
+#menu ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+#menu li {
+  list-style: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16pt;
+}
+#menu li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#pontos {
+  display: flex;
+  padding: 1rem;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  font-size: 12pt;
+}
+
+#mesa-jogo {
+  display: flex;
+  padding: 1rem;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2d661b;
+  min-height: 390px;
+  border-radius: 1rem;
+}
+#mesa-jogo #lado-maquina,
+#mesa-jogo #lado-jogador {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  display: flex;
+  min-height: 100px;
+}
+#mesa-jogo #lado-maquina {
+  margin-top: -60px;
+}
+
+.cartao-player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  background-color: #ffffff;
+  width: 120px;
+  height: 160px;
+  border-radius: 0.5rem;
+}
+.cartao-player:hover {
+  background-color: #d1d1d1;
+  cursor: pointer;
+}
+.cartao-player h1 {
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16pt;
+}
+.cartao-player div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #bdf3a7;
+  border: 1px solid rgba(0, 0, 0, 0.3137254902);
+  height: 100px;
+  border-radius: 0.3rem;
+}
+.cartao-player div img {
+  text-align: center;
+  max-width: 80%;
+}
+
+.cartao-maquina {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem;
+  background-color: #851028;
+  width: 120px;
+  height: 160px;
+  border-radius: 0.5rem;
+}
+.cartao-maquina div {
+  width: 80px;
+  height: 80px;
+  background-color: #851028;
+  border-radius: 50%;
+  filter: brightness(1.8);
+}
+
+/*# sourceMappingURL=style.css.map */
