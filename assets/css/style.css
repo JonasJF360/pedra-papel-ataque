@@ -12,6 +12,7 @@ body {
   align-items: center;
   min-height: 100vh;
 }
+
 body section {
   display: flex;
   flex-direction: column;
@@ -32,18 +33,21 @@ body section {
   padding: 1rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3137254902);
 }
+
 #menu ul {
   width: 100%;
   display: flex;
   justify-content: space-around;
   flex-direction: row;
 }
+
 #menu li {
   list-style: none;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 16pt;
 }
+
 #menu li:hover {
   text-decoration: underline;
   cursor: pointer;
@@ -71,6 +75,7 @@ body section {
   min-height: 390px;
   border-radius: 1rem;
 }
+
 #mesa-jogo #lado-maquina,
 #mesa-jogo #lado-jogador {
   display: flex;
@@ -80,6 +85,7 @@ body section {
   display: flex;
   min-height: 100px;
 }
+
 #mesa-jogo #lado-maquina {
   margin-top: -60px;
 }
@@ -95,29 +101,56 @@ body section {
   width: 120px;
   height: 160px;
   border-radius: 0.5rem;
+  transition: transform 0.2s ease;
 }
+
 .cartao-player:hover {
   background-color: #d1d1d1;
   cursor: pointer;
+  transform: scale(1.1);
 }
+
 .cartao-player h1 {
   margin: 0;
   text-align: center;
   text-transform: uppercase;
   font-size: 16pt;
 }
+
 .cartao-player div {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100%;
   background-color: #bdf3a7;
   border: 1px solid rgba(0, 0, 0, 0.3137254902);
   height: 100px;
   border-radius: 0.3rem;
 }
+
 .cartao-player div img {
   text-align: center;
   max-width: 80%;
+}
+
+
+.img-player {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.img-player.papel {
+  background-image: url("../img/papel.png");
+}
+
+.img-player.pedra {
+  background-image: url("../img/pedra.png");
+}
+
+.img-player.ataque {
+  background-image: url("../img/ataque.png");
 }
 
 .cartao-maquina {
@@ -130,6 +163,7 @@ body section {
   height: 160px;
   border-radius: 0.5rem;
 }
+
 .cartao-maquina div {
   width: 80px;
   height: 80px;

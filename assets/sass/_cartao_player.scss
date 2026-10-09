@@ -38,3 +38,21 @@
     }
 
 }
+
+.img-player {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &.papel {
+        background-image: url("../img/papel.png");
+    }
+
+    &.pedra {
+        background-image: url("../img/pedra.png");
+    }
+
+    &.ataque {
+        background-image: url("../img/ataque.png");
+    }
+}
