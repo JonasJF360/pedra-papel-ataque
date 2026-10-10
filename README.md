@@ -32,7 +32,7 @@ Esse projeto foi criado a partir de um sugestão do meu amigo **Lucas Ferreira**
 
 ### 📜 Tabela de Confrontos (Rodadas Normais)
 
-| Jogada 1 | Jogada 2 | Resultado |
+| JOGADOR 1 | JOGADOR 2 | RESULTADO |
 | --- | --- | --- |
 | Ataque | Pedra | **Ataque vence** (Jogador 2 perde 1 HP) |
 | Ataque | Papel | **Ataque vence** (Jogador 2 perde 1 HP) |
