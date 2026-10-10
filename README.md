@@ -1,20 +1,43 @@
 # Jogo - Pedra Papel e Ataque:
 Esse é um projeto baseado no jogo "pedra, papel e tesoura".
 
-Esse é um projeto criado em parceiria, entre [**Jonas J. Ferreira**](https://github.com/JonasJF360) e [**Lucas Ferreira**](https://github.com/LucasFe97):
-> O objetivo principal é criar um projeto colaborativo para adicionar-mos em nosso portifólio, e com isso, treinar/aperfeisoar o nosso conhecimento.
-
-## Levatamentos de requisitos (Regra de negócios):
-- Função para gerar um numero aleatório que irá definir a jugada da máquina.
-- Regras das jogadas:
-  - O que acontece quando se joga "pedra, papel ou ataque";
-  - Uma definição para ataque especial (tem direito a cada 5 pontos);
-  - Para a máguina as jogadas serão aleatórias.
-- Criar uma maneira de guardar o score do jogador para ficar como récorde de forma local.
-- Criar uma forma de adicionar novos players (jogadores).
+Esse projeto foi criado a partir de um sugestão do meu amigo **Lucas Ferreira**:
+> O objetivo principal é criar um jogo para pratiar meus conhecimentos em programação web.
 
 ## Tecnologias utiluzadas:
 - JavaScript;
 - HTML 5;
 - CSS 3;
 - SASS.
+
+
+# ⚔️ Regras Gerais: Pedra, Papel e Ataque Aéreo (Modo Sobrevivência)
+
+
+### 🏆 Condição de Vitória
+
+• O jogo acaba quando um jogador vencer 3 partidas completas (Melhor de 3 Partidas).
+
+### 💔 Sistema de Partida (HP)
+
+• Cada partida começa com ambos os jogadores com 10 Pontos de Vida (HP).
+• Quem perder o confronto da rodada perde 1 HP.
+• A partida termina quando o HP de alguém chegar a 0. O sobrevivente ganha 1 ponto no placar geral e os HPs resetam para 10.
+
+### ⚡ Ataque Especial
+
+• Gatilho: Desbloqueado apenas quando o jogador atinge 5 HP ou menos.
+• Uso: Pode ser usado uma única vez por partida.
+• Efeito: Causa Dano Massivo se vencer o confronto da rodada.
+
+### 📜 Tabela de Confrontos (Rodadas Normais)
+
+| Jogada 1 | Jogada 2 | Resultado |
+| --- | --- | --- |
+| Ataque | Pedra | **Ataque vence** (Jogador 2 perde 1 HP) |
+| Ataque | Papel | **Ataque vence** (Jogador 2 perde 1 HP) |
+| Pedra | Papel | **Pedra vence** (Jogador 2 perde 1 HP) |
+| Papel | Papel | **Sintonia Total** (Ambos ganham 1 HP) |
+| Pedra | Pedra | **Empate** (Ninguém perde ou ganha HP) |
+| Ataque | Ataque | **Aniquilação Mútua** (Ambos perdem 1 HP) |
+
