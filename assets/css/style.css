@@ -5,6 +5,17 @@
   font-family: "Roboto", sans-serif;
 }
 
+@keyframes misturarCores {
+  0% {
+    background-position: 0% 50%, 100% 50%, 50% 100%;
+  }
+  50% {
+    background-position: 100% 50%, 0% 50%, 50% 0%;
+  }
+  100% {
+    background-position: 0% 50%, 100% 50%, 50% 100%;
+  }
+}
 body {
   display: flex;
   flex-direction: column;
@@ -12,8 +23,21 @@ body {
   align-items: center;
   min-height: 100vh;
 }
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-color: #13141f;
+  background-image: radial-gradient(circle at 20% 30%, rgba(3, 255, 137, 0.3) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(8, 243, 247, 0.3) 0%, transparent 50%), radial-gradient(circle at 50% 20%, rgba(241, 35, 214, 0.3) 0%, transparent 45%);
+  background-size: 200% 200%;
+  animation: misturarCores 20s ease infinite;
+}
 
-body section {
+section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,9 +45,9 @@ body section {
   background-color: #bdddb3;
   width: 100%;
   max-width: 800px;
-  min-height: 400px;
+  min-height: 600px;
   border-radius: 1rem;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3137254902);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 #menu {
@@ -33,21 +57,18 @@ body section {
   padding: 1rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3137254902);
 }
-
 #menu ul {
   width: 100%;
   display: flex;
   justify-content: space-around;
   flex-direction: row;
 }
-
 #menu li {
   list-style: none;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 16pt;
 }
-
 #menu li:hover {
   text-decoration: underline;
   cursor: pointer;
@@ -71,11 +92,16 @@ body section {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  background-color: #2d661b;
-  min-height: 390px;
+  min-height: 430px;
   border-radius: 1rem;
+  /* Cor base do tecido (um tom de bege/linho cru) */
+  background-color: #2d661b;
+  background-color: #0b4d1a;
+  /* Cruzamento de gradientes para simular os fios vertical e horizontal */
+  background-image: linear-gradient(90deg, rgba(7, 46, 10, 0.2) 50%, transparent 50%), linear-gradient(rgba(7, 46, 10, 0.2) 50%, transparent 50%);
+  /* Controla a densidade da trama (fios bem pequenos e juntos) */
+  background-size: 60px 60px;
 }
-
 #mesa-jogo #lado-maquina,
 #mesa-jogo #lado-jogador {
   display: flex;
@@ -84,10 +110,6 @@ body section {
   width: 100%;
   display: flex;
   min-height: 100px;
-}
-
-#mesa-jogo #lado-maquina {
-  margin-top: -60px;
 }
 
 .cartao-player {
@@ -101,69 +123,92 @@ body section {
   width: 120px;
   height: 160px;
   border-radius: 0.5rem;
-  transition: transform 0.2s ease;
+  margin-bottom: -5px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
-
 .cartao-player:hover {
   background-color: #d1d1d1;
   cursor: pointer;
-  transform: scale(1.1);
+  transform: scale(1.2) translateY(-20px);
 }
-
 .cartao-player h1 {
   margin: 0;
   text-align: center;
   text-transform: uppercase;
   font-size: 16pt;
 }
-
 .cartao-player div {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
   background-color: #bdf3a7;
   border: 1px solid rgba(0, 0, 0, 0.3137254902);
+  width: 100%;
   height: 100px;
   border-radius: 0.3rem;
 }
-
 .cartao-player div img {
   text-align: center;
   max-width: 80%;
 }
 
-
 .img-player {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+  width: 100%;
 }
-
+.img-player.papel, .img-player.pedra, .img-player.ataque {
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .img-player.papel {
   background-image: url("../img/papel.png");
 }
-
 .img-player.pedra {
   background-image: url("../img/pedra.png");
 }
-
 .img-player.ataque {
   background-image: url("../img/ataque.png");
 }
 
+@keyframes shake {
+  0% {
+    transform: scale(1.1) rotate(0deg);
+  }
+  20% {
+    transform: scale(1.1) rotate(-3deg);
+  }
+  40% {
+    transform: scale(1.1) rotate(3deg);
+  }
+  60% {
+    transform: scale(1.1) rotate(-3deg);
+  }
+  80% {
+    transform: scale(1.1) rotate(3deg);
+  }
+  100% {
+    transform: scale(1.1) rotate(0deg);
+  }
+}
 .cartao-maquina {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0.5rem;
   background-color: #851028;
-  width: 120px;
-  height: 160px;
+  width: 100px;
+  height: 140px;
   border-radius: 0.5rem;
+  margin-top: -60px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
-
+.cartao-maquina:hover {
+  cursor: pointer;
+  transform: scale(0.9);
+}
+.cartao-maquina.balancar {
+  animation: shake 0.2s ease-in-out;
+}
 .cartao-maquina div {
   width: 80px;
   height: 80px;

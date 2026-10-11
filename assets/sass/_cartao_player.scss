@@ -9,10 +9,16 @@
     width: 120px;
     height: 160px;
     border-radius: .5rem;
+    margin-bottom: -5px;
+
+    // 1. Efeito de transição para a animação ficar suave
+    transition: transform 0.3s ease, background-color 0.3s ease;
 
     &:hover {
         background-color: $cor-img-cartao-player-hover;
         cursor: pointer;
+        // 2. Aumenta o cartão em 10% no hover
+        transform: scale(1.2) translateY(-20px);
     }
 
     h1 {
@@ -28,6 +34,7 @@
         align-items: center;
         background-color: $cor-img-cartao;
         border: 1px solid $cor-preto-50;
+        width: 100%; // Garante que a div preencha a largura interna do cartão
         height: 100px;
         border-radius: .3rem;
 
@@ -36,13 +43,18 @@
             max-width: 80%;
         }
     }
-
 }
 
 .img-player {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+    width: 100%;
+
+    &.papel,
+    &.pedra,
+    &.ataque {
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
 
     &.papel {
         background-image: url("../img/papel.png");

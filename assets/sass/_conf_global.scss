@@ -5,6 +5,20 @@
     font-family: 'Roboto', sans-serif;
 }
 
+@keyframes misturarCores {
+    0% {
+        background-position: 0% 50%, 100% 50%, 50% 100%;
+    }
+
+    50% {
+        background-position: 100% 50%, 0% 50%, 50% 0%;
+    }
+
+    100% {
+        background-position: 0% 50%, 100% 50%, 50% 100%;
+    }
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -12,16 +26,28 @@ body {
     align-items: center;
     min-height: 100vh;
 
-    section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 1rem;
-        background-color: $cor-pagina;
-        width: 100%;
-        max-width: 800px;
-        min-height: 400px;
-        border-radius: 1rem;
-        box-shadow: 0 0 3px $cor-preto-50;
+    &::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+
+        // Cor base do fundo (escura para dar contraste)
+        background-color: #13141f;
+
+        // 1. Criamos 3 "manchas" de cores circulares que se misturam
+        background-image:
+            radial-gradient(circle at 20% 30%, rgba(3, 255, 137, 0.3) 0%, transparent 50%), // Roxo/Neon
+            radial-gradient(circle at 80% 70%, rgba(8, 243, 247, 0.3) 0%, transparent 50%), // Ciano/Azul
+            radial-gradient(circle at 50% 20%, rgba(241, 35, 214, 0.3) 0%, transparent 45%); // Rosa/Magenta
+
+        // 2. Aumentamos o tamanho delas para permitir que elas dancem pela tela
+        background-size: 200% 200%;
+
+        // 3. Ativa a animação bem lenta (20 segundos) para a mistura ficar natural
+        animation: misturarCores 20s ease infinite;
     }
 }

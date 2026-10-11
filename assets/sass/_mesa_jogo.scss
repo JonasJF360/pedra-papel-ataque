@@ -5,9 +5,20 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background-color: $cor-mesa;
-    min-height: 390px;
+    min-height: 430px;
     border-radius: 1rem;
+    /* Cor base do tecido (um tom de bege/linho cru) */
+    background-color: $cor-mesa;
+    background-color: #0b4d1a;
+
+    /* Cruzamento de gradientes para simular os fios vertical e horizontal */
+    background-image:
+        linear-gradient(90deg, rgba(7, 46, 10, 0.2) 50%, transparent 50%),
+        linear-gradient(rgba(7, 46, 10, 0.2) 50%, transparent 50%);
+
+    /* Controla a densidade da trama (fios bem pequenos e juntos) */
+    background-size: 60px 60px;
+
 
     #lado-maquina,
     #lado-jogador {
@@ -19,9 +30,4 @@
         min-height: 100px;
 
     }
-
-    #lado-maquina {
-        margin-top: -60px;
-    }
-
 }

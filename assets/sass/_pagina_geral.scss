@@ -1,0 +1,12 @@
+section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        background-color: $cor-pagina;
+        width: 100%;
+        max-width: 800px;
+        min-height: 600px;
+        border-radius: 1rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, .2); // Sombra mais forte para destacar o tabuleiro
+    }

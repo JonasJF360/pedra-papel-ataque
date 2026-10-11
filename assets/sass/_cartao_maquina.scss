@@ -1,12 +1,55 @@
+// 1. Criando a animação da balançadinha
+@keyframes shake {
+    0% {
+        transform: scale(1.1) rotate(0deg);
+    }
+
+    20% {
+        transform: scale(1.1) rotate(-3deg);
+    }
+
+    40% {
+        transform: scale(1.1) rotate(3deg);
+    }
+
+    60% {
+        transform: scale(1.1) rotate(-3deg);
+    }
+
+    80% {
+        transform: scale(1.1) rotate(3deg);
+    }
+
+    100% {
+        transform: scale(1.1) rotate(0deg);
+    }
+}
+
 .cartao-maquina {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: .5rem;
     background-color: $cor-cartao-maquina;
-    width: 120px;
-    height: 160px;
+    width: 100px;
+    height: 140px;
     border-radius: .5rem;
+    margin-top: -60px;
+
+    // 1. Efeito de transição para a animação ficar suave
+    transition: transform 0.3s ease, background-color 0.3s ease;
+
+    &:hover {
+        cursor: pointer;
+        // 2. Aumenta o cartão em 10% no hover
+        transform: scale(0.9);
+    }
+
+    // 2. Classe que o JavaScript vai injetar ao clicar
+    &.balancar {
+        // Mantém o tamanho do hover (1.1) e aplica a tremida por 0.2 segundos
+        animation: shake 0.2s ease-in-out;
+    }
 
     div {
         width: 80px;
